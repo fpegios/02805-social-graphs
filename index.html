@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="Social Graphs and Interactions 2018 Project | DTU">
+    <meta name="keywords" content="social graphs 2018, dtu">
+    <meta name="author" content="fpegios">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Graphs 2018</title>
+
+    <!-- Styles -->
+    <style>
+        * {
+            box-sizing: border-box;
+            color: #3C0D3D;
+            font-family: PremierSans-Bold,Arial,Helvetica Neue,Helvetica,sans-serif
+        }
+        html, body {
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        html {
+            background-color: #3C0D3D;
+        }
+
+        body {
+            background-color: #00FD8F;
+            width: 1366px;
+            margin: 0 auto;
+            padding: 30px 50px;
+            font-weight: 600!important;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 36px;
+            font-weight: 700!important;
+        }
+
+        h2 {
+            font-size: 28px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align:center">Social Graphs and Interactions | Premier League 2018/19</h1>
+
+    <section>
+        <h2>Introduction</h2>
+
+        <p>
+            The objective of this project was to expose this year's Premier League, bring to the light all the connections between the league's teams, players and cities.
+            The major reasong to work with this subject is the personal passion about football and English premiership especially. It is interesting to see how the teams are connected,
+            which are the teams that most of the current active premier league players have played for and in which cities most of the active players have played during their career.
+        </p>
+    </section>
+
+    <section>
+        <h2>Dataset</h2>
+
+        <p>
+            Since Premier League is the most popular football league in the world nowadays, there are several sources that could be used to get the appropriate data for this project.
+            After a thorough evaluation of some websites, <a href="https://www.transfermarkt.co.uk/" target="_blank">transfermarkt.co.uk</a> was the selected one as it contains the data in a good structure.
+            Transfermarkt is a website that includes all the information about football teams and players. Due to the reason that there is no accessible API for Transfermarkt, we used HTML parsing in 
+            different subpages of the website to get the needed data. After getting the data, two datasets were created, one for the teams and one for the players. The former includes for each team
+            a full and a short name, the link to the team's profile, an id and the city the team is located. The latter includes for each player a full name, the link to his profile, an id, and 
+            an array of the teams he has played for during his career. Players' data has a size of 109KB and teams' data about 3KB.
+        </p>
+        <p>
+            Here are all the premier league teams parsed from Transfermarkt:<br><br>
+            <img src="project/img/teams.png"/>
+        </p>
+    </section>
+
+    <section>
+        <h2>Results</h2>
+
+        <p>
+            The next graph presents all connections between teams based on football players and the teams that have played during their career:<br/><br/>
+            <img src="project/img/players-teams.png"/><br/><br/>
+            From this graph we can see in which teams most of the players have played for during their career.
+        </p>
+
+        <table>
+            <tr><td>62  Southampton FC </td></tr>
+            <tr><td>56  Chelsea FC </td></tr>
+            <tr><td>54  Leicester City </td></tr>
+            <tr><td>52  Manchester United </td></tr>
+            <tr><td>52  Watford FC </td></tr>
+            <tr><td>51  Everton FC </td></tr>
+            <tr><td>49  Manchester City </td></tr>
+            <tr><td>49  Tottenham Hotspur </td></tr>
+            <tr><td>47  Burnley FC </td></tr>
+            <tr><td>46  AFC Bournemouth </td></tr>
+            <tr><td>46  Huddersfield Town </td></tr>
+            <tr><td>44  Liverpool FC </td></tr>
+            <tr><td>44  Arsenal FC </td></tr>
+            <tr><td>43  West Ham United </td></tr>
+            <tr><td>43  Fulham FC  </td></tr>
+            <tr><td>43  Newcastle United </td></tr>
+            <tr><td>41  Crystal Palace </td></tr>
+            <tr><td>39  Cardiff City  </td></tr>
+            <tr><td>38  Brighton & Hove Albion </td></tr>
+            <tr><td>37  Wolverhampton Wanderers</td></tr>
+        </table>
+
+        <p>
+            Southampton comes first in this analysis. It is something obvious as it is known that it has one of the best academies in England and sell every year players to bigger teams in the league.
+        </p>
+
+        <p>
+            The next graph presents all connections between cities based on the cities the football players have played in during their career:<br/><br/>
+            <img src="project/img/players-cities.png"/><br/><br/>
+        </p>
+
+        <table>
+            <tr><td>276 London</td></tr>
+            <tr><td>101 Manchester</td></tr>
+            <tr><td>95 Liverpool</td></tr>
+            <tr><td>62 Southampton</td></tr>
+            <tr><td>54 Leicester</td></tr>
+            <tr><td>52 Watford</td></tr>
+            <tr><td>47 Burnley</td></tr>
+            <tr><td>46 Bournemouth</td></tr>
+            <tr><td>46 Huddersfield</td></tr>
+            <tr><td>43 Newcastle</td></tr>
+            <tr><td>39 Cardiff</td></tr>
+            <tr><td>38 Brighton</td></tr>
+            <tr><td>37 Wolverhampton</td></tr>
+        </table>
+
+        </p>
+
+        <p>
+            London comes first in this analysis. It is the city with the most football teams in England and the strongest ones.
+        </p>
+    </section>
+
+    <section>
+        <h2>Links</h2>
+        <p>
+            <a href="https://raw.githubusercontent.com/fpegios/02805-social-graphs/master/project/teamData.txt" target="_blank">Teams Dataset</a><br>
+            <a href="https://raw.githubusercontent.com/fpegios/02805-social-graphs/master/project/playersData.txt" target="_blank">Players Dataset</a>
+        </p>
+    </section>
+
+    <section>
+        <h2>References</h2>
+        Transfermarkt, <a href="https://www.transfermarkt.co.uk/" target="_blank">https://www.transfermarkt.co.uk/</a>
+    </section>
+
+    <section>
+        <br><br>
+        <h2 style="text-align:right">Fotios Pegios (s171866)</h2>
+    </section>
+</body>
+</html>
